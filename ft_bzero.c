@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-26 20:02:27 by aassis-p          #+#    #+#             */
-/*   Updated: 2024-09-26 20:02:27 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/09/26 20:02:27 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/09/30 20:22:26 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_bzero(void *s, size_t n)
 	unsigned char	*temp;
 
 	temp = (unsigned char *)s;
-
 	while (n > 0)
 	{
 		*(temp++) = 0;

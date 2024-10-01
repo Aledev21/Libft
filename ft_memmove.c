@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 21:28:26 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/09/30 20:31:29 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/09/27 16:16:01 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/01 00:27:26 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*destcpy;
-	const unsigned char	*srccpy;
+	char	*destcpy;
+	char	*srccpy;
+	size_t	i;
 
-	if (dst == NULL || src == NULL)
+	if (!destcpy && !srccpy)
+		return (NULL);
+	destcpy = (char *) dst;
+	srccpy = (char *)src;
+	i = 0;
+	if (destcpy > srccpy)
+		while (len--)
+			destcpy[len] = srccpy[len];
+	else
 	{
-		return (dst);
-	}
-	srccpy = (unsigned char *)src;
-	destcpy = (unsigned char *)dst;
-	while (n > 0)
-	{
-		*(destcpy++) = *(srccpy++);
-		n--;
+		while (i < len)
+		{
+			destcpy[i] = srccpy[i];
+			i++;
+		}
 	}
 	return (dst);
 }
