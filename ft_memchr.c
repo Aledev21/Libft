@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aassis-p <aassis-p@student.42.fr>          #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024-10-02 01:25:38 by aassis-p          #+#    #+#             */
+/*   Updated: 2024-10-02 01:25:38 by aassis-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*memchr(const void *s, int c, size_t n)
+{
+	unsigned char	*ss;
+	unsigned char	cc;
+	size_t			i;
+
+	ss = (const unsigned char *)s;
+	cc = (unsigned char )c;
+	i = 0;
+	while (i < n)
+	{
+		if (ss[i] == cc)
+		{
+			return ((void *) &ss[i]);
+		}
+		i++;
+	}
+	return (NULL);
+}
