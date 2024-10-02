@@ -18,10 +18,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*srccpy;
 	size_t	i;
 
-	if (!destcpy && !srccpy)
-		return (NULL);
 	destcpy = (char *) dst;
 	srccpy = (char *)src;
+	if (!destcpy && !srccpy)
+		return (NULL);
 	i = 0;
 	if (destcpy > srccpy)
 		while (len--)
