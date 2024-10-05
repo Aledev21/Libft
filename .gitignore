@@ -1,0 +1,6 @@
+# Ignorar pastas ocultas
+.*
+# Ignorar configurações de IDE
+.vscode
+.teste
+.o*
