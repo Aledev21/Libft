@@ -1,6 +1,4 @@
 # Ignorar pastas ocultas
 .*
-# Ignorar configurações de IDE
-.vscode
-.teste
+#Ignorar arquivos de compilacao
 .o*
