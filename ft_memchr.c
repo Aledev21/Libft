@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-02 01:25:38 by aassis-p          #+#    #+#             */
-/*   Updated: 2024-10-02 01:25:38 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/02 01:25:38 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/03 15:29:47 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ss;
-	unsigned char	cc;
-	size_t			i;
+	const unsigned char	*ss;
+	unsigned char		cc;
+	size_t				i;
 
 	ss = (const unsigned char *)s;
 	cc = (unsigned char )c;

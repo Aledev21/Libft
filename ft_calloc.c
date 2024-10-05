@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 01:42:02 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/03 15:00:41 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/04 21:48:13 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/04 22:44:03 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
-	unsigned char	*ss1;
-	unsigned char	*ss2;
+	unsigned char	*temp;
 
-	ss1 = (unsigned char *)s1;
-	ss2 = (unsigned char *)s2;
-	i = 0;
-	while (i < n && (ss1[i] != '\0' || ss2[i] != '\0'))
+	temp = (unsigned char *)s;
+	while (n > 0)
 	{
-		i++;
+		*(temp++) = 0;
+		n--;
 	}
-	if (ss1[i] != ss2[i])
+}
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	unsigned char	*temp;
+	size_t			sizetotal;
+
+	sizetotal = nmemb * size;
+	temp = malloc(sizetotal);
+	if (temp == NULL)
 	{
-		return (ss1[i] - ss2[i]);
+		return (NULL);
 	}
-	else
-		return (0);
+	ft_bzero(temp, sizetotal);
+	return (temp);
 }
