@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-10-01 18:49:36 by aassis-p          #+#    #+#             */
-/*   Updated: 2024-10-01 18:49:36 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/01 18:49:36 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/06 00:19:53 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
+	unsigned char copyc;
 
 	i = 0;
+	copyc = (unsigned char)c;
 	while (s[i] != '\0' )
 	{
-		if (s[i] == c)
+		if (s[i] == copyc)
 		{
 			return ((char *)&s[i]);
 		}
 		i++;
+	}
+	if (copyc == '\0')
+	{
+		return ((char *)&s[i]);
 	}
 	return (NULL);
 }
