@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 22:05:02 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/08 17:04:19 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/09 00:59:38 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/09 01:13:42 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
+	char	*substr;
+	size_t	s_len;
 
-	i = 0;
-	if (n == 0)
+	if (!s)
 	{
-		return (0);
+		return (NULL);
 	}
-	while (i < n && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	s_len = ft_strlen(s);
+	if (start >= s_len)
 	{
-		if (s1[i] != s2[i] )
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
+		return(ft_strdup(""));
 	}
-	while (i < n)
+	if(len > s_len - start)
 	{
-		if (s1[i] != s2[i] )
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
+		len = s_len - start;
 	}
-	return (0);
+	substr = (char *)malloc(len + 1);
+	if (!substr)
+	{
+		return (NULL);
+	}
+	ft_strlcpy(substr, s + start, len  + 1);
+	return (substr);
 }

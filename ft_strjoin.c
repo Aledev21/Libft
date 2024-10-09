@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 22:05:02 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/08 17:04:19 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/09 01:16:03 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/09 01:30:16 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+static size_t get_len(const char *s)
 {
-	size_t	i;
-
-	i = 0;
-	if (n == 0)
+	if (s == NULL)
 	{
 		return (0);
 	}
-	while (i < n && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	return (ft_strlen(s));
+}
+
+char *ft_strjoin(char const *s1, char const *s2)
+{
+	char	*result;
+	size_t	len1;
+	size_t	len2;
+	
+	len1 = get_len(s1);
+	len2 = get_len(s2);
+	result = (char *)malloc(len1 + len2 +1);
+	if (result == NULL)
 	{
-		if (s1[i] != s2[i] )
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
+		return (NULL);
 	}
-	while (i < n)
+	if (s1 != NULL)
 	{
-		if (s1[i] != s2[i] )
-		{
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		}
-		i++;
+		ft_strlcpy(result, s1, len1 +1);
 	}
-	return (0);
+	if (s2 != NULL)
+	{
+		ft_strlcpy(result, s2, len2 +1);
+	}else {
+		result[len1] = '\0';
+	}
+	return (result);
 }
