@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
     unsigned char *tmpe;
     size_t i;
     
-    i = 0;  
+    i = 0;      
     tmpe = malloc(nmemb * size);
     if (!tmpe)
         return (NULL);

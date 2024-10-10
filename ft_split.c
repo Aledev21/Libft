@@ -36,23 +36,6 @@ static int count_words(const char *s, char c)
 	return (count);
 }
 
-static char *count_lett(char *s, char c)
-{
-	int	count;
-	
-	count = 0;
-
-	while (*s)
-	{
-		if ()
-		{
-			
-		}
-		
-	}
-	
-}
-
 static char *next_words(const char **s, char c)
 {
 	const char	*start;
@@ -60,7 +43,7 @@ static char *next_words(const char **s, char c)
 
 	start = *s;
 	len = 0;
-	while (**s && **s != c)
+	while (**s && **s == c)
 	{
 		(*s)++;
 	}
@@ -97,14 +80,10 @@ char **ft_split(char const *s, char c)
 	{
 		return (NULL);
 	}
-	while (j < word_count)
-	{
-		*array[j] = malloc()
-	}
-	
+		
 	while (i < word_count)
 	{
-		array[i] = next_words(&s,c);
+		array[i] = next_words(&s, c);
 		if (!array[i])
 		{
 			while (i > 0)
