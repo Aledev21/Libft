@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 22:46:39 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/04 23:18:38 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:31:59 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ char	*ft_strdup(const char *s)
 		copy[i] = s[i];
 		i++;
 	}
-	copy[i] = '\0';
 	return (copy);
 }

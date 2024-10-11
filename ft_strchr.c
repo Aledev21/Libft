@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:49:36 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/06 00:19:53 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:52:00 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	unsigned char copyc;
+	size_t			i;
+	unsigned char	copyc;
 
 	i = 0;
 	copyc = (unsigned char)c;

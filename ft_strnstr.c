@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 02:01:41 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/08 23:34:23 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/11 00:23:44 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	
-	if(big == NULL)
-	{
-		
-	}
-	if (little == NULL)
-	{
+	if (!big && len == 0)
+		return (NULL);
+	if (!little || little[0] == '\0')
 		return ((char *)big);
-	}
 	while (i < len && big[i])
 	{
-		while (big[i +j] == little[j] && big[i +j] && i + j < len)
+		j = 0;
+		while (big[i + j] == little[j] && big[i + j] && i + j < len)
 		{
 			j++;
 		}
@@ -39,7 +35,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			return ((char *)big + i);
 		}
 		i++;
-		j = 0;
 	}
 	return (NULL);
 }

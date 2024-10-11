@@ -6,13 +6,13 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 01:16:03 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/09 01:30:16 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/11 00:25:03 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t get_len(const char *s)
+static size_t	get_len(const char *s)
 {
 	if (s == NULL)
 	{
@@ -21,28 +21,31 @@ static size_t get_len(const char *s)
 	return (ft_strlen(s));
 }
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*result;
 	size_t	len1;
 	size_t	len2;
-	
+
 	len1 = get_len(s1);
 	len2 = get_len(s2);
 	result = (char *)malloc(len1 + len2 +1);
 	if (result == NULL)
-	{
 		return (NULL);
-	}
 	if (s1 != NULL)
 	{
-		ft_strlcpy(result, s1, len1 +1);
+		while (s1)
+		{
+			result = s1++;
+		}
 	}
 	if (s2 != NULL)
 	{
-		ft_strlcpy(result, s2, len2 +1);
-	}else {
-		result[len1] = '\0';
+		while (result)
+		{
+			result = s2++;
+		}
 	}
+	result = '\0';
 	return (result);
 }

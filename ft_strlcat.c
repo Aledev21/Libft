@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 01:27:49 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/08 23:37:18 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:22:06 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	while (i < (dstsize - dstlen -1) && src[i] != '\0')
 	{
-		dst[dstlen + 1] = src[i];
+		dst[dstlen + i] = src[i];
 		i++;
 	}
 	dst[dstlen + i] = '\0';
