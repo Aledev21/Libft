@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 01:33:32 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/11 00:22:15 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/11 00:39:09 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,15 @@ static	char	*next_words(const char **s, char c)
 	return (NULL);
 }
 
-static void	free_array(void **array, unsigned int size)
+static void	free_array(void **array, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
+	if (!array)
+	{
+		return ;
+	}
 	while (i < size)
 	{
 		free(array[i]);
@@ -76,7 +80,7 @@ char	**ft_split(char const *s, char c)
 {
 	char				**array;
 	unsigned int		word_count;
-	unsigned int		i;
+	size_t				i;
 
 	i = 0;
 	if (!s)
@@ -90,7 +94,7 @@ char	**ft_split(char const *s, char c)
 		array[i] = next_words(&s, c);
 		if (!array[i])
 		{
-			free_array(array, i);
+			free_array((void **)array, i);
 		}
 		i++;
 	}
