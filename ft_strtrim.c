@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 02:07:12 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/11 05:54:28 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/11 06:14:14 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	in_set(char c, char const *set)
 {
 	while (*set)
 	{
-		if (c == set)
+		if (c == *set)
 		{
 			return (1);
 		}
