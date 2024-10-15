@@ -6,13 +6,11 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 01:16:03 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/12 17:53:13 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/13 01:53:30 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 static size_t	get_len(const char *s)
 {

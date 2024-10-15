@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 01:27:49 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/13 01:53:35 by aassis-p         ###   ########.fr       */
+/*   Created: 2024/10/15 01:28:45 by aassis-p          #+#    #+#             */
+/*   Updated: 2024/10/15 01:52:05 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	srclen;
-	size_t	dstlen;
-	size_t	i;
+	char	result;
 
-	i = 0;
-	srclen = ft_strlen(src);
-	dstlen = ft_strlen(dst);
-	if (dstsize == 0)
+	if (n == -2147483648)
 	{
-		return (srclen);
+		write(fd, "-2147483648", 11);
 	}
-	if (dstlen >= dstsize)
+	else if (n < 0)
 	{
-		return (dstsize + srclen);
+		write(fd, "-", 1);
+		n = -n;
+		ft_putnbr_fd(n, fd);
 	}
-	while (i < (dstsize - dstlen -1) && src[i] != '\0')
+	else
 	{
-		dst[dstlen + i] = src[i];
-		i++;
+		if (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+		}
+		result = (n % 10) + 48;
+		write(fd, &result, 1);
 	}
-	dst[dstlen + i] = '\0';
-	return (dstlen + srclen);
 }
