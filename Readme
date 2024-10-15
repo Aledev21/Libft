@@ -65,22 +65,10 @@ cd Libft
 make
 
 # Limpar os Arquivos Compilados
-
 make clean
 
 # Remover Todos os Arquivos Gerados
-
 make fclean
 
 # Recompilar a Biblioteca
-
 make re
-
-###  Incluir a Biblioteca em Seu Projeto
-Inclua o cabeçalho da biblioteca (`libft.h`) em seus arquivos de código que utilizam esta biblioteca. Por exemplo:
-
-```c
-#include "libft.h"
-
-
-
