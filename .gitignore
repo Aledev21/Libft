@@ -3,3 +3,4 @@
 #Ignorar arquivos de compilacao
 .o*
 .sh
+libftTester/

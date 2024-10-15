@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.rio>          #+#  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.rio>          #+#  +:+       +#+       */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024-09-26 19:05:39 by aassis-p          #+#    #+#             */
 /*   Updated: 2024-09-26 19:05:39 by aassis-p         ###   ########.fr       */
