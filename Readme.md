@@ -1,6 +1,6 @@
 # Libft
 
-![Logo da Libft](https://www.biblio.campusananindeua.ufpa.br/index.php/ultimas-noticias/573-conheca-a-biblioteca-de-alexandria)
+![Logo da Libft](https://media.istockphoto.com/id/961493144/pt/vetorial/library-of-alexandria-or-bibliotheca-alexandrina-in-egypt-illustration-1880.jpg?s=1024x1024&w=is&k=20&c=VbqfVwKEGDIHUSduzHzV6qDb9p_xH-rNnweoeSTdKww=)
 
 ## Introdução
 Libft é uma biblioteca em C que implementa uma coleção de funções úteis, baseando-se em funções da biblioteca padrão libc e incluindo funcionalidades adicionais. Este projeto é essencial para fornecer ferramentas que podem ser utilizadas em projetos futuros no curso.
