@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:17:57 by aassis-p          #+#    #+#             */
 /*   Updated: 2024/10/13 15:41:01 by aassis-p         ###   ########.fr       */

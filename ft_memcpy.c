@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 21:28:26 by aassis-p          #+#    #+#             */
 /*   Updated: 2024/09/30 20:31:29 by aassis-p         ###   ########.fr       */

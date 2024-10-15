@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:49:09 by aassis-p          #+#    #+#             */
 /*   Updated: 2024/10/11 00:26:54 by aassis-p         ###   ########.fr       */

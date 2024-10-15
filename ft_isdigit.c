@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:20:40 by aassis-p          #+#    #+#             */
 /*   Updated: 2024/10/06 00:07:45 by aassis-p         ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 01:33:32 by aassis-p          #+#    #+#             */
 /*   Updated: 2024/10/11 00:39:09 by aassis-p         ###   ########.fr       */

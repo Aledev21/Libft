@@ -2,3 +2,4 @@
 .*
 #Ignorar arquivos de compilacao
 .o*
+.sh
