@@ -3,53 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+       */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 18:49:09 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/04 15:28:36 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:36:44 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	signal(char c)
+int	ft_isspace(int c)
 {
-	if (c == '-')
-	{
-		return (-1);
-	}
-	else if (c == '+')
+	if (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32)
 	{
 		return (1);
 	}
 	return (0);
 }
 
-int	space(int c)
-{
-	return (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32);
-}
-
 int	ft_atoi(const char *str)
 {
 	int	result;
 	int	sign;
+	int	i;
 
 	result = 0;
 	sign = 1;
-	while (space(*str))
+	i = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '+' && str[i + 1] != '-')
+		i++;
+	if (str[i] == '-')
 	{
-		str++;
+		sign = -1;
+		i++;
 	}
-	if (*str == '-' || *str == '+')
+	while (str[i] && str[i] >= 48 && str[i] <= 57)
 	{
-		sign = signal(*str);
-		str++;
+		result *= 10;
+		result += str[i] - 48;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return (sign * result);
+	result *= sign;
+	return (result);
 }

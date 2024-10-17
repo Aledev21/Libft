@@ -3,57 +3,69 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+       */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:49:09 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/11 00:26:54 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/16 16:33:18 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_length(int n)
+static int	int_len(long nbr)
 {
-	int	length;
+	int	count;
 
-	length = 0;
-	if (n <= 0)
+	count = 0;
+	if (nbr < 0)
 	{
-		length = 1;
+		count++;
+		nbr = -nbr;
 	}
-	while (n != 0)
+	if (nbr == 0)
+		count++;
+	while (nbr != 0)
 	{
-		n /= 10;
-		length++;
+		nbr /= 10;
+		count++;
 	}
-	return (length);
+	return (count);
+}
+
+static char	*pre_conv(int len)
+{
+	char	*tmp;
+
+	tmp = malloc((len + 1) * sizeof(char));
+	if (!tmp)
+		return (NULL);
+	tmp[0] = '0';
+	return (tmp);
 }
 
 char	*ft_itoa(int n)
 {
-	char			*str;
-	int				length;
-	unsigned int	num;
-	int				i;
+	int		len;
+	int		i;
+	char	*result;
+	long	nbr;
 
-	length = get_length(n);
-	str = ft_calloc(length + 1, sizeof(char));
-	if (!str)
+	nbr = n;
+	len = int_len(nbr);
+	result = pre_conv(len);
+	if (!result)
 		return (NULL);
+	if (nbr < 0)
+		nbr = -nbr;
+	i = len - 1;
+	while (nbr != 0)
+	{
+		result[i] = ((nbr % 10) + 48);
+		nbr = nbr / 10;
+		i--;
+	}
 	if (n < 0)
-	{
-		str[0] = '-';
-		num = -n;
-	}
-	else
-	{
-		num = n;
-	}
-	i = length -1;
-	while (num > 0)
-	{
-		str[i--] = (num % 10) + '0';
-		num /= 10;
-	}
-	return (str);
+		result[0] = '-';
+	result[len] = 0;
+	return (result);
 }
