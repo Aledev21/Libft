@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 01:33:32 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/16 11:00:43 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:27:27 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,3 +101,61 @@ char	**ft_split(char const *s, char c)
 	array[i] = NULL;
 	return (array);
 }
+
+/*#include <stdio.h>
+#include <string.h>
+#include <assert.h>
+#include "libft.h"
+
+void free_split_array(char **array) {
+    for (int i = 0; array[i] != NULL; i++) {
+        free(array[i]);
+    }
+    free(array);
+}
+
+void test_ft_split() {
+    char **result;
+
+    // Teste 1: Dividir uma frase simples
+    result = ft_split("Hello World", ' ');
+    assert(result != NULL);
+    assert(strcmp(result[0], "Hello") == 0);
+    assert(strcmp(result[1], "World") == 0);
+    assert(result[2] == NULL); // Termina com NULL
+    free_split_array(result);
+    printf("Teste 1 passou.\n");
+
+    // Teste 2: Dividir com vírgulas
+    result = ft_split("apple,banana,cherry", ',');
+    assert(result != NULL);
+    assert(strcmp(result[0], "apple") == 0);
+    assert(strcmp(result[1], "banana") == 0);
+    assert(strcmp(result[2], "cherry") == 0);
+    assert(result[3] == NULL); // Termina com NULL
+    free_split_array(result);
+    printf("Teste 2 passou.\n");
+
+    // Teste 3: Dividir com múltiplos espaços
+    result = ft_split("   foo   bar   baz   ", ' ');
+    assert(result != NULL);
+    assert(strcmp(result[0], "foo") == 0);
+    assert(strcmp(result[1], "bar") == 0);
+    assert(strcmp(result[2], "baz") == 0);
+    assert(result[3] == NULL); // Termina com NULL
+    free_split_array(result);
+    printf("Teste 3 passou.\n");
+
+    // Teste 4: Sem delimitadores
+    result = ft_split("singleword", ' ');
+    assert(result != NULL);
+    assert(strcmp(result[0], "singleword") == 0);
+    assert(result[1] == NULL); // Apenas uma palavra
+    free_split_array(result);
+    printf("Teste 4 passou.\n");
+}
+
+int main() {
+    test_ft_split();
+    return 0;
+}*/

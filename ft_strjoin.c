@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aassis-p <aassis-p@student.42.rio>          +#+  +:+       +#+       */
+/*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 01:16:03 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/13 01:53:30 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/18 14:41:45 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,66 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (result = v_str(s1, s2, result));
 }
+
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void test_ft_strjoin(void)
+{
+    char *result;
+
+    // Teste 1: Juntar duas strings não nulas
+    result = ft_strjoin("Hello, ", "World!");
+    if (result && strcmp(result, "Hello, World!") == 0)
+        printf("Teste 1 passou: %s\n", result);
+    else
+        printf("Teste 1 falhou\n");
+    free(result);
+
+    // Teste 2: Juntar uma string vazia com uma não vazia
+    result = ft_strjoin("", "Test");
+    if (result && strcmp(result, "Test") == 0)
+        printf("Teste 2 passou: %s\n", result);
+    else
+        printf("Teste 2 falhou\n");
+    free(result);
+
+    // Teste 3: Juntar uma não vazia com uma string vazia
+    result = ft_strjoin("Test", "");
+    if (result && strcmp(result, "Test") == 0)
+        printf("Teste 3 passou: %s\n", result);
+    else
+        printf("Teste 3 falhou\n");
+    free(result);
+
+    // Teste 4: Juntar duas strings vazias
+    result = ft_strjoin("", "");
+    if (result && strcmp(result, "") == 0)
+        printf("Teste 4 passou: %s (string vazia)\n", result);
+    else
+        printf("Teste 4 falhou\n");
+    free(result);
+
+    // Teste 5: Juntar uma string nula com uma não nula
+    result = ft_strjoin(NULL, "Only this");
+    if (result && strcmp(result, "Only this") == 0)
+        printf("Teste 5 passou: %s\n", result);
+    else
+        printf("Teste 5 falhou\n");
+    free(result);
+
+    // Teste 6: Juntar uma string não nula com uma nula
+    result = ft_strjoin("Only this", NULL);
+    if (result && strcmp(result, "Only this") == 0)
+        printf("Teste 6 passou: %s\n", result);
+    else
+        printf("Teste 6 falhou\n");
+    free(result);
+}
+
+int main(void)
+{
+    test_ft_strjoin();
+    return 0;
+}*/

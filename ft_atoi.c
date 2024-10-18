@@ -6,7 +6,7 @@
 /*   By: aassis-p <aassis-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 18:49:09 by aassis-p          #+#    #+#             */
-/*   Updated: 2024/10/17 12:36:44 by aassis-p         ###   ########.fr       */
+/*   Updated: 2024/10/18 12:59:19 by aassis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,41 @@ int	ft_atoi(const char *str)
 	result *= sign;
 	return (result);
 }
+
+/*#include <stdio.h>
+#include <assert.h>
+
+void test_ft_atoi() {
+    // Testes básicos
+    assert(ft_atoi("123") == 123);
+    assert(ft_atoi("-123") == -123);
+    assert(ft_atoi("+123") == 123);
+    
+    // Testes com espaços em branco
+    assert(ft_atoi("   456") == 456);
+    assert(ft_atoi("\t\n\v\f\r 789") == 789);
+    assert(ft_atoi("   -42") == -42);
+    assert(ft_atoi(" +42   ") == 42);
+    
+    // Testes com caracteres não numéricos
+    assert(ft_atoi("42abc") == 42);
+    assert(ft_atoi("abc42") == 0);
+    assert(ft_atoi("   -abc42") == 0);
+    
+    // Testes com strings vazias
+    assert(ft_atoi("") == 0);
+    
+    // Testes com apenas espaços
+    assert(ft_atoi("   ") == 0);
+    
+    // Testes com sinais
+    assert(ft_atoi("-+5") == 0); // sinal inválido
+    assert(ft_atoi("+-5") == 0); // sinal inválido
+
+    printf("Todos os testes passaram!\n");
+}
+
+int main() {
+    test_ft_atoi();
+    return 0;
+}*/
